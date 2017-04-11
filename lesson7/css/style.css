@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+        
+}
+.flex-container{
+    display: flex;
+    flex-flow: row wrap;
+    border: 5px solid #7c7979;
+    width: 90%;
+    margin: auto;
+}
+.block1,.block2,.block3,.block4,.block5{
+    background: #1a3274;
+    margin: 5px;
+    color:bisque;
+    height: 50px;
+}
+.block1{
+    flex: 0 100%;
+}
+.block2, .block4{
+    flex: 1;
+}
+.block3{
+    flex: 3;
+}
+.block5{
+    flex: 0 100%;
+}
+/* 
+----------------
+second container
+----------------
+*/
+.flex-container2{
+    display: flex;
+    flex-flow: row wrap;
+    border: 5px solid #7c7979;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.flex-container2 .block4{
+    flex: 0 100%;
+}
+.flex-container2 .block3{
+    flex: 2;
+}
+/*
+------------------
+third container
+------------------
+*/
+
+header, main, footer{
+    display: flex;
+    flex-flow: row wrap;
+    background: #254a90;
+    color:aliceblue;
+    margin: 5px auto;
+}
+.left-menu, .right-menu{
+    border: 1px solid aliceblue;
+    width: 25%;
+    
+}
+.left-menu li, .right-menu li{
+    display: inline-block;
+}
+.logo{
+    border: 1px solid aliceblue;
+    width: 50%;
+    
+}
+.post{
+    width: 25%;
+    border: 1px solid aliceblue;
+    padding: 10px;
+}
+.content{
+    width: 75%;
+    border: 1px solid aliceblue;
+    padding: 10px;
+}
+.block6, .block7, .block8{
+    border: 1px solid aliceblue;
+    width: 33.33333%;
+}
+@media (max-width:920px){
+    header, main, footer{
+        flex-flow: column wrap;
+    }
+    .logo, .content{
+        order: -1;
+        width: 100%;
+       
+    }
+    
+    .left-menu, .right-menu, .post, .block6, .block7, .block8{
+        width: 100%;
+        
+    }
+    .post{
+        display: flex;
+    }
+ 
+}
