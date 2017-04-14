@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://use.fontawesome.com/8d93255060.js"></script>
+</head>
+
+<body>
+    <h1>Анкета</h1>
+    <form action="https://weblaboratory.in.ua/mail/" method="post">
+        <div>
+            <label for="name">Введіть ваше ім'я</label>
+        </div>
+        <div>
+            <input type="text" name="firstName" id="name" value="" placeholder="введіть ваше ім'я">
+        </div>
+        <div>
+            <label for="surname">Введіть ваше прізвище</label>
+        </div>
+        <div>
+            <input type="text" name="surName" id="surname" value="" placeholder="введіть ваше прізвище">
+        </div>
+        <div>
+            <label for="citizenship">Громадянином якої країни ви є</label>
+        </div>
+        <div>
+            <input type="text" name="citizenship" id="citizenship" value="" placeholder="громадянство">
+        </div>
+        <div>
+            <label for="login">Введіть логін</label>
+        </div>
+        <div>
+            <input type="text" name="login" id="login" value="" placeholder="введіть логін">
+        </div>
+        <div>
+            <label for="password">Ведіть пароль</label>
+        </div>
+        <div>
+            <input type="password" name="password" id="password" value="" placeholder="введіть пароль">
+        </div>
+        <div>
+            <label for="phone">Введіть ваш номер телофону</label>
+        </div>
+        <div>
+            <input type="tel" name="phone" id="phone" value="" placeholder="+38099000000">
+        </div>
+        <div>
+            <label for="mail">Введіть ваш email</label>
+        </div>
+        <div>
+            <input type="email" name="mail" id="mail" value="" placeholder="Ваш e-mail">
+        </div>
+        <select name="year of birth">
+            <option value="0">рік народження</option>
+            <option value="1990">1990</option>
+            <option value="1991">1991</option>
+            <option value="1992">1992</option>
+            <option value="1993">1993</option>
+            <option value="1994">1994</option>
+            <option value="1995">1995</option>
+            <option value="1996">1996</option>
+            <option value="1997">1997</option>
+            <option value="1998">1998</option>
+            <option value="1999">1999</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+        </select>
+        <br> Стать:
+        <p>
+            <label class="radio">
+                <input type="radio" name="sex" value="man"><span><i></i></span>чол</label>
+        </p>
+        <p>
+            <label class="radio">
+                <input type="radio" name="sex" value="woman"><span><i></i></span>жін</label>
+        </p>
+        <br> Якими мовами ви володієте:
+        <p>
+            <label class="checkbox">
+                <input type="checkbox" name="lang1" value="spanish"><span><i class="fa fa-check" aria-hidden="true"></i></span>іспанська</label>
+        </p>
+        <p>
+            <label class="checkbox">
+                <input type="checkbox" name="lang2" value="engl"><span><i class="fa fa-check" aria-hidden="true"></i></span>англійська</label>
+        </p>
+        <p>
+            <label class="checkbox">
+                <input type="checkbox" name="lang3" value="ukrain"><span><i class="fa fa-check" aria-hidden="true"></i></span>українська</label>
+        </p>
+        <p>
+            <label class="checkbox">
+                <input type="checkbox" name="lang4" value="polish"><span><i class="fa fa-check" aria-hidden="true"></i></span>польська</label>
+        </p>
+        <div>
+            <input class="submit" type="submit" value="Надіслати анкету">
+        </div>
+    </form>
+</body>
+
+</html>
