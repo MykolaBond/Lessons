@@ -127,7 +127,7 @@ li {
 
 .list li::before {
     /* так і не зміг добитися цифри з нулем */
-    content: counter(number);
+    content: '0' counter(number);
     position: absolute;
     font-size: 75px;
     color: #ffffff;
