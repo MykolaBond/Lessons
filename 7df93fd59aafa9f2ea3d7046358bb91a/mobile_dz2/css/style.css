@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1260px;
+    margin: auto;
+}
+.top-flex-container{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    color: #343333;
+}
+.left-side{
+    flex:0 25%;
+}
+.right-side{
+    flex:0 75%;
+    text-align: right;
+}
+.logo{
+    display: inline-block;
+}
+.left-side p{
+    display: inline-block;
+}
+.menu{
+    display: inline-block;
+}
+li{
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px
+}
+.menu a{
+    text-decoration: none;
+    color: #343333;
+}
+.menu li+li{
+    border-left: 2px solid #343333;
+}
+.button{
+    display: inline-block;
+    color: #ffffff;
+    background: #e05309;
+    width: 100px;
+    height: 33px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 31px;
+}
+section{
+    background: url(../images/bg.jpg);
+    background-size: cover;
+}
+.main-flex-container{
+    display: flex;
+    justify-content: space-between;
+}
+.mac{
+    position: relative;
+    margin-top: -10px;
+    
+}
+.buy, .demo, .mac h2{
+    position:absolute;
+}
+.mac h2 {
+    color: #ffffff;
+    top: 40px;
+    right: 94px;
+    text-align: center;
+    font-size: 52px;
+    font-weight: bold;
+}
+.text {
+    text-align: center;
+}
+.buy{
+    top: 207px;
+    left: 100px;
+}
+.demo {
+    top: 207px;
+    right: 100px;
+}
+.text h1{
+    font-size: 60px;
+    margin: 0.67em 0;
+    color: #ffffff;
+    margin-bottom: 16px;
+    
+}
+.text h2{
+    color:#ffffff;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.text p{
+    color: #e38608;
+}
+.text p+p{
+    color: #ffffff;
+}
+@media (max-width:1200px){
+    .container{
+        max-width: 992px;
+}
+}
+@media (max-width:992px){
+    .container{
+    max-width: 768px;
+    }
+    .right-side {
+    flex: 0 50%;
+    }
+    .left-side {
+    flex: 0 50%;
+    }
+
+}
+@media(max-width:768px){
+    .container{
+    max-width: 320px;
+    }
+    .right-side {
+    flex: 0 100%;
+        text-align: center;
+    }
+    .left-side {
+    flex: 0 100%;
+        text-align: center;
+    }
+    .mac{
+        display: none;
+    }
+    
+}
