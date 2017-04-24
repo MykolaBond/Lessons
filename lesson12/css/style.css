@@ -1,0 +1,25 @@
+section{
+    text-align: center;
+    margin-bottom: 50px;
+    border: 3px solid #042c31;
+}
+h2{
+    color: #000000;
+    font-size: 50px;
+    margin-bottom: 100px;
+   
+    
+}
+.swiper-container {
+    width: 600px;
+    height:300px;
+} 
+.swiper-container img{
+    width:100%;
+}
+.swiper-pagination-bullet{
+	width:20px;
+	height: 20px;
+	background: #620808;
+	border: 1px solid #000000;
+}
