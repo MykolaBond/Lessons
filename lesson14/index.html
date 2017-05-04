@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson14</title>
+</head>
+<body>
+	<script>
+		var name = 'Yoda';
+		var age = 300;
+		var password = 'leia';
+		var userAge = +prompt('Вік свій сюди пиши');
+		if (isNaN(userAge) || userAge==null){
+			document.write('Число маєш ввести ти');
+			console.log(userAge)
+			}else if (userAge<100){
+				document.write('Зарано прийшов сюди ти');
+			}else{
+				var userName = prompt('Як звати тебе юний джедай');
+				if(userName==name){
+					var userPass = prompt('Пароль відомий тобі написати тут мусиш');
+				        if(userPass==password){
+					    document.write('Тебе раді великий майстер вітити ми');
+				        }else{
+					    document.write('Додому імперський шпигун іди краще');
+				        }
+			    }else{
+				   document.write('Хай прибуде з тобою сила майстер ', userName);
+			   }}
+		
+		
+		
+	</script>
+	
+</body>
+</html>
