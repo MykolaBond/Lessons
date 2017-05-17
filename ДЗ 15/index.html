@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson15</title>
+</head>
+<body>
+  <H1 id='title'></H1>
+  <p id='work'></p>
+  <hr>
+  <h3>Favorite music</h3>
+  <ul id='music'></ul>
+  <button onclick="user.access()">Перевірка на адміна</button>
+    <button onclick="user.checkAge()">Перевірка на повноліття</button>
+    <button onclick="user.getMusic()">Додати музику</button>
+     <button onclick="user.changWork()">Додати інформацію про роботу</button>
+   <script>
+       var title = document.getElementById('title');
+       var work = document.getElementById('work');
+       var music = document.getElementById('music');
+       var user = {
+           myName: 'Mykola',
+           lastName: 'Bondarenko',
+           age: 38,
+           work: {
+               place: 'Nasa',
+               date: 2000,
+               salary: 1,
+               position: 'astronavt'
+           },
+           music: [{artist:'didieMoruani',
+                   song:'space'},
+                   {artist:'enigma',
+                    song:'someSong'},
+                   {artist:'ivobobul',
+                    song:'someTerribleSong'}
+                  ],
+           access: function(myName){
+               if (this.myName == 'admin'){
+                   return document.write('Hello, admin');
+               }
+               return document.write('You are not admin');
+           },
+           checkAge: function(age){
+               if(this.age > 18){
+                   return document.write('Hello, '+ this.myName);
+               }
+                return document.write('Oh, sorry, this site only for adults');
+           },
+           changWork: function(dat, mon, pos, ple){
+				 dat = prompt("З якого року ви працюєте на ваші роботі");
+				 mon = prompt("Яка у вас заробітня плата");
+				 pos = prompt("Ваша посада");
+				 ple = prompt("Де ви працюєте");
+				return this.work.date = dat, this.work.money = mon, this.work.position = pos, this.work.place = ple, work.innerHTML = user.work.date + ' ' + user.work.place + ' ' + user.work.position+ ' ' + user.work.salary;
+				
+			},
+           getMusic: function(){
+               var art = prompt("Введіть ім'я вашого улюбленого виконавця");
+               var son = prompt("Ваша улюблена пісня");
+               return this.music.push({ artist: art, song:son}), music.innerHTML = getMusicList(user.music);
+           }
+       };
+       
+       function getMusicList(data){
+           var liMusic = ' ';
+           for(var i=0; i<data.length; i++){
+               liMusic += '<li>';
+               liMusic += data[i].artist + '-' + data[i].song;
+               liMusic += '</li>';
+           }
+           return liMusic;
+       };
+       title.innerHTML = user.myName + ' ' + user.lastName + ' ' + user.age + ' years old';
+       work.innerHTML = user.work.date + ' ' + user.work.place + ' ' + user.work.position+ ' ' + user.work.salary;
+       music.innerHTML = getMusicList(user.music);
+    </script>
+    
+</body>
+</html>
