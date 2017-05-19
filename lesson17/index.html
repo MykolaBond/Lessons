@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson17</title>
+</head>
+
+<body>
+	<form action="#" id="form">
+		<input type="text" id="text" name="login" placeholder="Введіть логін">
+		<input type="password" id="pass" name="password" placeholder="Введіть пароль">
+		<button type="submit" id="button">Відправити</button>
+	</form>
+	<div id="msg"></div>
+	<script>
+		var form = document.getElementById('form');
+		var msg = document.getElementById('msg');
+		var inputs = document.querySelectorAll('form input');
+		form.addEventListener('submit', function (event) {
+			event.preventDefault();
+			for (var i = 0; i < inputs.length; i++) {
+				if (inputs[i].name == 'login') {
+					if (inputs[i].value == 'admin') {
+						msg.innerHTML = ' ';
+						msg.innerHTML += '<h1>привіт, адмін</h1>';
+					}
+					else {
+						msg.innerHTML = ' ';
+						msg.innerHTML += '<h1>Hello ' + inputs[i].value+ '</h1>';
+					}
+				};
+				if (inputs[i].name == 'password') {
+					msg.innerHTML = ' ';
+					msg.innerHTML += '<p>Ваш пароль: ' + inputs[i].value + ' </p>';
+				}
+			}
+			event.preventDefault();
+		});
+	</script>
+</body>
+
+</html>
